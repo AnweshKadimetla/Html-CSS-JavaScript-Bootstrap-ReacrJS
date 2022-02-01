@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Printing statements</title>
+    </head>
+    <body>
+        <h1 id="add"></h1>
+        <script>
+            /*Printing statements are 4 ways
+            1.innerHTml--->define id
+            2.document.write()-->Testing
+            3.window.alert()-->alert box to display
+            4.console.log()-->Debugging purpose*/
+            var a=10;
+            var b=5
+            let result=a+b;
+            document.getElementById("add").innerHTML=" <b>This is the 1st way sum of a + b:</B> "+result+"<br>";
+            document.write("******************************<br>");
+            document.write("<b>This is 2 way result:</B> "+result+"<br>");
+            document.write("******************************<br>");
+            window.alert('This is 3rd way to display');
+            document.write("*******************************<br>")
+            console.log("This is the 4th way to display");
+        </script>
+    </body>
+</html>
