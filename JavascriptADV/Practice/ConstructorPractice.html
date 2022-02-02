@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Constructor in Javascript</title>
+    </head>
+    <body>
+        <h2 id="con"></h2>
+        <script>
+            function cons(){
+                document.getElementById("con").innerHTML="This is empty constructor";
+            }
+            const obj=new cons();
+        </script>
+        <script>
+            function parcons(id,fname,lname,salary){
+                this.id=id;
+                this.fname=fname;
+                this.lname=lname;
+                this.salary=salary;
+                document.write(id+"<br>");
+                document.write(fname+"<br>");
+                document.write(lname+"<br>");
+                document.write(salary+"<br>")
+            }
+            const obje=new parcons(100,'Sachin','A',200000);
+            document.write(obje.id);
+        </script>
+    </body>
+</html>

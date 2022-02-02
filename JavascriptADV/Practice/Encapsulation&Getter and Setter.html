@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Setter and Getter</title>
+    </head>
+    <body>
+        <script>
+            const bike={
+                bikename:'RangeRover',
+                get bikeName(){
+                    return this.bikename;
+                },
+                set changeName(newbike){
+                    this.bikename=newbike;
+                }
+            }
+            document.write(bike.bikeName+"<br>");
+            bike.changeName='Harly devidson'
+            document.write(bike.bikeName+"<br>")
+        </script>
+        <script>
+            //***************************Another way --using -- Object.defineProperty
+            const short={
+                size_one:'L',
+                size_two:'M',
+                size_three:'S'
+            }
+            Object.defineProperty(short,'shortsize',{
+                get:function(){
+                    return this.size_one;
+                }
+            })
+            Object.defineProperty(short,'changesize',{
+                get:function(value){
+                    this.size_one=value;
+                }
+            })
+            document.write(short.size_one+"<br>")
+            short.size_one='XL'
+            document.write(short.size_one);
+        </script>
+    </body>
+</html>

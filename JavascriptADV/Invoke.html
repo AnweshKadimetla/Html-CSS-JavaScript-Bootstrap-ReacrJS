@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invoke function</title>
+    </head>
+    <body>
+        <h2 id="invoke"></h2>
+        <h2 id="default"></h2>
+        <h2 id="fahrenheit"></h2>
+        <p>In this to make functions and calls functions and to convert  fahrenheit to celsius</p>
+        <input type="text" >
+        <script>
+            //Invoke functionis a User defined function
+            function fun(){
+                document.getElementById("invoke").innerHTML=("my name is fuction")
+            }
+            //Invoking the function
+            fun();
+            /* default parameters
+            if you're writing a function and want to support optional parameters/arguments
+            you can specify default values by adding = after the name of parameters
+            */
+           function hello(name='Sachin'){
+            //document.getElementById("default").innerHTML="my name is default parameters"
+            console.log(`My name is :${name}`)
+           }
+           //Invoking function
+           hello('Sachin');
+
+           //General programming
+           var product=myfun(43,20)
+           console.log(product);
+           function myfun(number_one,number_two){
+               //Return a product of two numbers
+               return number_one*number_two;
+           }
+           function toCelsius(fahrenheit){
+               return (5/9)*(fahrenheit-32)
+           }
+           document.getElementById("fahrenheit").innerHTML="100 fahrenheit is:"+toCelsius(100)+'Celsius';
+        </script>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js Objects</title>
+        <style>
+            .name,.nam,.na,.n{
+                background-color: darkorchid;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="objects" class="name"></h2>
+        <h2 id="obj2" class="nam"></h2>
+        <h2 id="obj3" class="na"></h2>
+        <h2 id="obj4" class="n"></h2>
+        <h2 id="obj"></h2>
+        <!--Whenever we deal with arrays or objects the preffred return datatype be const.-->
+        <script>
+        const Company={
+        firstname:'Wipro',
+        lastname:'Technologies',
+        location:'Bangalore',
+        pincode:'560043'
+        }
+        console.log(Company.firstname);
+        document.getElementById("objects").innerHTML=Company.lastname;
+        document.getElementById("obj2").innerHTML=Company.location;
+        document.getElementById("obj3").innerHTML=Company.pincode;
+        document.getElementById("obj4").innerHTML="I am working in "+Company.firstname+" "+Company.lastname+" "+Company.location+" "+Company.pincode;
+    </script>
+    <script>
+        //Javascript constructor
+        function person(){
+            this.name="Sachin",
+            this.age=28;
+        }
+        //create object
+        const object=new person();
+        //print the values
+        document.getElementById("obj").innerHTML=object.name+" "+"Is"+" "+object.age+" year old";
+    </script>
+    <script>
+        //Constructor with parameters
+        function employee(empid,fname,lname,empgen){
+            //Assigning the parameters values to the calling objects
+            this.empid=102
+            
+        }
+        //create an object
+        const object11 = new employee();
+        //Adding the properties
+        object11.fname='Sourav';
+        object11.lname='Gungully'
+        object11.empgen='male'
+        //Accessing the properties
+        console.log(object11.empid);
+        console.log(object11.fname);
+        console.log(object11.lname);
+        console.log(object11.empgen);
+    </script>
+    <!--**********************************************************************************************-->
+    <script>
+        //Constructor with parameters
+        function employee(empid,fname,lname,empgen){
+            //Assigning the parameters values to the calling objects
+            this.empid=empid,
+            this.fname=fname,
+            this.lname=lname,
+            this.empgen=empgen
+        }
+        //create an object
+        const object10 = new employee(101,'Sachin','A','male');
+        //Accessing the properties
+        console.log(object10.empid);
+        console.log(object10.fname);
+        console.log(object10.lname);
+        console.log(object10.empgen);
+    </script>
+    <script>
+        //Getter and setter methods
+        const car={
+            //Data property
+            carname:'Hyundai creta',
+            get getCarname(){
+                return this.carname;
+            },
+            set changeName(newcar){
+                this.carname=newcar;
+            }
+        }
+        //Access data Property
+        console.log(car.carname);
+        //Accessing getter methods
+        console.log(car.getCarname)
+        ////Change property using setter()
+        car.carname='Breeza';
+        console.log(car.getCarname);
+    </script>
+    <script>
+        //Good programming practice
+        const mobile={
+            mobile_one:'I phone',
+            mobile_two:'One plus',
+            mobile_three:'MI',
+        }
+            //Getter method
+            //another approch -using object.defineProperty
+            Object.defineProperty(mobile,'getCarname',{
+                get:function(){
+                    return this.mobile_one;
+                }
+            })
+        //setteing property
+        Object.defineProperty(mobile,'ChangeName',{
+            set:function(value){
+                this.mobile_one=value;
+            }
+        })
+        //Access the data 
+        console.log(mobile.mobile_one);
+        mobile.mobile_one='vivo';
+        console.log(mobile.mobile_one);
+    </script>
+    </body>
+</html>
